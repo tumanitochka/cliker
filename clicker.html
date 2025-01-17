@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт - Кликер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">Главная</a> | Кликер
+        </nav>
+    </header>
+    <main>
+        <p>Счетчик: <span id="counter">0</span></p>
+        <button id="clickButton">
+            <img src="https://zooofoto.ru/foto/936/kapibara_foto_risovat_53.webp" alt="">
+        </button>
+    </main>
+    <footer>
+        Все права защищены &copy; 2025
+    </footer>
+    <script>
+        // Получаем сохраненное значение из localStorage или устанавливаем 0
+        let count = localStorage.getItem('count') ? parseInt(localStorage.getItem('count')) : 0;
+        const counterDisplay = document.getElementById('counter');
+        const clickButton = document.getElementById('clickButton');
+
+        // Обновляем отображение счетчика
+        counterDisplay.textContent = `${count}`;
+
+        const click = () => {
+            count++;
+            counterDisplay.textContent = `${count}`;
+            // Сохраняем новое значение в localStorage
+            localStorage.setItem('count', count);
+        }
+
+        clickButton.addEventListener('click', click);
+    </script>
+</body>
+</html>
