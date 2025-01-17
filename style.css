@@ -29,12 +29,19 @@ h1 {
 button {
     background: brown;
     border-radius: 50%;
-    border: none;
+    border: solid 5px #53161625;
 }
 
 button:active {
     background: rgb(255,0,0);
     background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(165,42,42,1) 100%);
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+
+    /* -webkit-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    -moz-box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    box-shadow: -5px -5px 5px -5px rgba(34, 60, 80, 0.6) inset; */
 }
 
 button > img {
@@ -42,9 +49,13 @@ button > img {
     height: 150px;
 }
 
+button:active {
+    transform: skew(5deg, 5deg);
+}
+
 button:active > img {
     transform: scale(90%);
-    transition: transform .4s linear;
+    transition: transform .1s linear;
 }
 
 #counter {
