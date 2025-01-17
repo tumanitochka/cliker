@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 header, footer {
     background-color: brown; /* цвет фона */
     color: wheat; /* цвет текста */
@@ -34,8 +38,8 @@ button:active {
 }
 
 button > img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
 }
 
 button:active > img {
